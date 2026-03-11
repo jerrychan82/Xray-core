@@ -40,6 +40,7 @@ var (
 	outboundConfigLoader = NewJSONConfigLoader(ConfigCreatorCache{
 		"block":       func() interface{} { return new(BlackholeConfig) },
 		"blackhole":   func() interface{} { return new(BlackholeConfig) },
+		"drop":        func() interface{} { return new(DropConfig) },
 		"loopback":    func() interface{} { return new(LoopbackConfig) },
 		"direct":      func() interface{} { return new(FreedomConfig) },
 		"freedom":     func() interface{} { return new(FreedomConfig) },
